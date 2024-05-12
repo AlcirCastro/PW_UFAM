@@ -1,0 +1,17 @@
+p {
+    border: 20px solid black;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 16px;
+    background: rgba(128, 128, 128, 0.826);
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 20cm;
+    height: 5cm;
+    padding-top: 30px;
+    padding-right: 16px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    text-align: left;
+}
