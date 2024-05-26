@@ -12,7 +12,7 @@ class IntegerSet {
         }
     }
     excluir(valor){
-        if(this.conjunto.includes(valor)){
+        if(valor < this.valorMax && valor >= 0){
             this.conjunto[valor] = false;
         }else{
             console.log("Valor inexistente");
@@ -80,4 +80,8 @@ console.log("Intersecção:" + " " + conjuntoIntersec.toString());
 const conjuntoDiferenca = conjunto1.diferenca(conjunto2);
 console.log("Diferença:" + " " + conjuntoDiferenca.toString());
 
+conjunto1.excluir(6);
+console.log("Conjunto 1, excluir(6):" + " " + conjunto1.toString());
 
+conjunto2.excluir(9);
+console.log("Conjunto 2, excluir(9):" + " " + conjunto2.toString());
