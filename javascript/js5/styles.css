@@ -1,0 +1,15 @@
+body {
+    font-family: Comic Sans MS;
+}
+#grafico {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+.barra {
+    background-color: red;
+    margin-right: 5px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
