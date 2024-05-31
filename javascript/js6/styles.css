@@ -1,8 +1,8 @@
 body {
-    height: 200px; background: beige;
+    height: 200px; background: gray;
     }
 
 .dot {
     height: 8px; width: 8px; border-radius: 4px;
-    background: blue; position: absolute;
+    background: crimson; position: absolute;
     }
