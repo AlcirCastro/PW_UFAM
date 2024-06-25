@@ -1,0 +1,9 @@
+Node.js é um ambiente de execução de código JavaScript baseado no motor V8 da Google, que permite 
+aos desenvolvedores construírem aplicações de rede escaláveis e de alta performance. 
+Ele é conhecido por seu modelo de I/O assíncrono, que permite lidar com um grande número 
+de conexões simultâneas sem a necessidade de threads adicionais, o que é ideal para 
+aplicações que requerem alta concorrência, como servidores web e APIs. 
+Além disso, Node.js utiliza o sistema de módulos ES6 (ECMAScript Modules) 
+e possui um vasto ecossistema de pacotes npm, que oferece uma ampla 
+gama de bibliotecas e ferramentas prontas para uso, facilitando o 
+desenvolvimento rápido e eficiente de aplicações modernas.

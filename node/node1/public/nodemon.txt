@@ -1,0 +1,8 @@
+Nodemon é uma ferramenta popular utilizada no desenvolvimento Node.js para monitorar 
+alterações nos arquivos do projeto e automaticamente reiniciar o servidor quando 
+detecta uma modificação. Isso elimina a necessidade de reiniciar manualmente o servidor 
+a cada vez que o código é alterado, o que é especialmente útil durante o desenvolvimento. 
+Nodemon é configurável e suporta várias opções para controlar o comportamento de 
+reinicialização, como ignorar certos diretórios ou arquivos. Ele simplifica o 
+ciclo de desenvolvimento ao permitir que os desenvolvedores se concentrem na escrita 
+de código sem interrupções causadas por reinicializações manuais frequentes do servidor.
