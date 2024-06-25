@@ -1,3 +1,0 @@
-Os ESModules (ECMAScript Modules) são a implementação padrão de módulos em JavaScript, 
-introduzidos oficialmente no ECMAScript 6 (ES6) e são suportados nativamente por 
-todos os navegadores modernos e ambientes de execução como o Node.js.

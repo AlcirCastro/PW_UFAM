@@ -1,6 +1,0 @@
-libuv é uma biblioteca multi-plataforma de suporte ao desenvolvimento de software, 
-amplamente utilizada em ambientes que requerem operações de I/O assíncronas e de alta performance, como o Node.js. 
-Ela fornece uma abstração uniforme para operações de sistema, como manipulação de arquivos, 
-redes, threads, timers, e loops de eventos, independentemente do sistema operacional subjacente. Ao fazer isso, 
-libuv permite que desenvolvedores escrevam código que seja eficiente e portable, aproveitando ao máximo 
-a capacidade de processamento assíncrono para melhorar a performance e escalabilidade de aplicações.
