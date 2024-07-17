@@ -3,12 +3,16 @@ import { Request, Response } from 'express';
 import { loremIpsum } from 'lorem-ipsum';
 
 const index = ((req: Request, res: Response) => {
-    res.send('Página principal do site');
+    res.render('main/home', {
+        mensagem: 'Seja bem vindo ao site!',
+        header: 'Página Inicial do Site',
+    });
 });
 
 const hb1 = ((req : Request, res : Response) => {
     res.render('main/hb1', {
         mensagem: 'Olá, você está aprendendo Express + HBS!',
+        header: 'Inicio',
     });
 });
 
@@ -17,6 +21,7 @@ const hb2 = ((req : Request, res : Response) => {
         poweredByNodejs: true,
         name: 'Express',
         type: 'Framework',
+        header: 'Framework',
     });
 });
 
@@ -27,7 +32,9 @@ const hb3 = ((req : Request, res : Response) => {
         { nome: 'Edleno Moura', sala: 1236 },
         { nome: 'Elaine Harada', sala: 1231 }
     ];
-    res.render('main/hb3', { profes});
+    res.render('main/hb3', { profes, 
+        header: 'Alguns professores do Icomp'
+    });
 });
 
 const hb4 = (function(req : Request,res : Response){
@@ -40,7 +47,9 @@ const hb4 = (function(req : Request,res : Response){
         { name: 'Docker', type: 'Virtualization', poweredByNodejs: false },
         { name: 'Sequelize', type: 'ORM tool', poweredByNodejs: true },
         ];
-    res.render('main/hb4', { technologies});
+    res.render('main/hb4', { technologies,
+        header: 'Algumas tecnologias'
+    });
 })
 
 const bemvindo = ((req: Request, res: Response) => {
