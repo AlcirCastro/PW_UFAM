@@ -5,23 +5,30 @@ import { loremIpsum } from 'lorem-ipsum';
 const index = ((req: Request, res: Response) => {
     res.render('main/home', {
         mensagem: 'Seja bem vindo ao site!',
-        header: 'Página Inicial do Site',
     });
 });
 
 const hb1 = ((req : Request, res : Response) => {
     res.render('main/hb1', {
         mensagem: 'Olá, você está aprendendo Express + HBS!',
-        header: 'Inicio',
     });
 });
+
+const testCookie = (req: Request, res: Response) => {
+    if(!("test" in  req.cookies)){
+        res.cookie("test", "1");
+        res.send("Você ainda não tinha o cookie. Criando...");
+
+    }else{
+        res.send("Você já tinha o cookie");
+    }
+}
 
 const hb2 = ((req : Request, res : Response) => {
     res.render('main/hb2', {
         poweredByNodejs: true,
         name: 'Express',
         type: 'Framework',
-        header: 'Framework',
     });
 });
 
@@ -33,7 +40,6 @@ const hb3 = ((req : Request, res : Response) => {
         { nome: 'Elaine Harada', sala: 1231 }
     ];
     res.render('main/hb3', { profes, 
-        header: 'Alguns professores do Icomp'
     });
 });
 
@@ -48,7 +54,6 @@ const hb4 = (function(req : Request,res : Response){
         { name: 'Sequelize', type: 'ORM tool', poweredByNodejs: true },
         ];
     res.render('main/hb4', { technologies,
-        header: 'Algumas tecnologias'
     });
 })
 
@@ -70,9 +75,5 @@ const lorem = ((req: Request, res: Response) => {
     res.send(paragraphs);
 });
 
-const erro = ((req: Request, res: Response) => {
-    res.statusCode = 404;
-    res.send('Página não encontrada');
-});
 
-export default { index, lorem, bemvindo, hb1, hb2, hb3, hb4, erro };
+export default { index, lorem, bemvindo, hb1, hb2, hb3, hb4, testCookie };

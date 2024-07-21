@@ -5,6 +5,17 @@ import path from 'path';
 import router from './router/router';
 import { engine } from 'express-handlebars';
 import logger from "./middlewares/logger";
+import cookieParser from 'cookie-parser';
+import session from "express-session";
+import { v4 } from "uuid"; 
+
+
+declare module "express-session"{
+    interface SessionData{
+        uid: string;
+    }
+}
+
 
 // Carregar as variáveis de ambiente
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
@@ -26,11 +37,18 @@ app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/views`);
 app.locals.valor = "10";
 
-// Usar o middleware de logger
 app.use(logger(LOG_FORMAT));
-
-// Usar o router
+app.use(cookieParser());
+app.use(session({
+    genid: () => v4(),
+    secret: "4m04kplsvltvdokqKwut",
+    saveUninitialized: true,
+    resave: true,
+    cookie: { maxAge: 360000 }
+}))
+app.use(express.urlencoded({ extended: false }));
 app.use(router);
+
 
 app.listen(PORT, () => {
     console.log(`Express app iniciada na porta ${PORT}.`);
